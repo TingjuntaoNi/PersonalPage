@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #fff;
+    
+}
+
+/* 顶部导航 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    background-color: #6c735e;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar .logo {
+    font-size: 23px;
+}
+
+.navbar h1 {
+    color: #eeeeee;
+    font-weight: bold;
+}
+
+
+.navbar nav a {
+    margin-left: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #eeeeee;
+    font-weight: bold;
+}
+
+
+.navbar nav a:hover {
+    color: #f7f6bb; /* 淡黄色 hover */
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    position: relative; /* 让子菜单相对定位 */
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 子菜单默认隐藏 */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 120px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.dropdown-menu li {
+    padding: 8px 0px;
+}
+
+.dropdown-menu li a {
+    color: #3e642c;
+    font-size: 18px;
+}
+
+/* 悬停显示子菜单 */
+.dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    color: #333;
+    background-color: #e5e3e3;
+    border-radius: 4px;
+}
+
+.container {
+    display: flex;
+    max-width: 1500px;
+    margin: 20px auto;
+    gap: 40px;
+    margin-left: 20px; /* 减小左侧间距 */
+    /* padding: 0 20px; */
+}
+
+/* 左侧栏模块化增强 */
+.sidebar {
+    width: 300px;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 40px 15px; /* 减小 padding，让布局更紧凑 */
+    border-radius: 5px; /* 让左侧整体有圆角 */
+}
+
+/* 头像 */
+.avatar {
+    width: 150px;
+    height: auto;
+    border-radius: 60%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* 联系信息列表 */
+.sidebar .contact {
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+/* 默认行距 */
+.sidebar .contact li {
+    margin-bottom: 50px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* personalinfo 模块紧凑 */
+.sidebar .contact li.personalinfo {
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+/* social 模块紧凑 */
+.sidebar .contact li.social {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+/* 模块之间的视觉分隔（加分割线） */
+.sidebar .contact li.social:first-of-type {
+    margin-top: 30px; /* 模块之间大一点 */
+}
+
+/* 去掉列表符号 */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 链接美化 */
+.sidebar .contact li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.sidebar .contact li a:hover {
+    color: #6c735e; /* 深绿色 hover */
+}
+
+
+/* 右侧内容 */
+.content {
+    flex: 1;
+}
+
+.content section {
+    margin-bottom: 30px;
+}
+
+.content h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+#publications ul li {
+    margin-bottom: 15px; /* 每条之间的距离 */
+    line-height: 1.6;    /* 行距，控制文本的紧凑度 */
+}
