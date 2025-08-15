@@ -99,12 +99,11 @@ body {
 }
 
 .container {
-    display: flex;
-    max-width: 1500px;
-    margin: 20px auto;
-    gap: 40px;
-    margin-left: 20px; /* 减小左侧间距 */
-    /* padding: 0 20px; */
+  display: flex;
+  max-width: 1500px;
+  margin: 20px auto;
+  gap: 40px;
+  padding: 0 20px; /* 添加左右 padding，推荐用 padding 而不是 margin-left/right */
 }
 
 /* 左侧栏模块化增强 */
@@ -196,3 +195,65 @@ body {
     margin-bottom: 15px; /* 每条之间的距离 */
     line-height: 1.6;    /* 行距，控制文本的紧凑度 */
 }
+
+
+
+/* Research 卡片样式（仅作用于该 section） */
+#research .research-list{
+display:flex;
+flex-direction:column;
+gap:28px;
+margin-top:16px;
+}
+#research .research-item{
+display:flex;
+gap:24px;
+align-items:flex-start;
+padding:16px 0;
+border-top:1px solid var(--border, #eee);
+}
+#research .research-item:first-child{ border-top:none; }
+
+#research .thumb{
+display:block;
+flex:0 0 300px;           /* 左侧图宽度 */
+max-width:300px;
+}
+#research .thumb img{
+width:100%;
+height:160px;             /* 近似截图比例 */
+object-fit:cover;
+border-radius:12px;
+box-shadow:0 6px 16px rgba(0,0,0,.08);
+}
+
+#research .meta{ flex:1; }
+#research .title{
+margin:0 0 8px 0;
+font-size:22px;
+line-height:1.25;
+font-weight:700;
+}
+#research .teaser{
+margin:0;
+color:#666;               /* 灰色简介 */
+font-size:16px;
+line-height:1.6;
+}
+
+/* 响应式：窄屏改为上下布局 */
+@media (max-width: 900px){
+#research .research-item{
+    flex-direction:column;
+}
+#research .thumb{
+    width:100%;
+    flex:unset;
+}
+#research .thumb img{
+    height:180px;
+}
+}
+
+
+
